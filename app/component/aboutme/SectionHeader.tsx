@@ -1,5 +1,5 @@
 interface SectionHeaderProps {
-  children: string;
+  children: React.ReactNode;
 }
 
 export function SectionHeader({ children }: SectionHeaderProps) {
