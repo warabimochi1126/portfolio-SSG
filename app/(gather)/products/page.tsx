@@ -2,18 +2,19 @@ import { FaGithubSquare } from "react-icons/fa";
 
 import EnvHubImage from "@/public/envhub.png";
 import { ProductCard } from "@/app/component/products/ProductCard";
-import { ProductsHeader } from "@/app/component/products/ProductsHeader";
+import { ProductsHeaderStr } from "@/app/component/products/ProductsHeaderStr";
 import { DetailImageIcon } from "@/app/component/products/DetailImageIcon";
 import DetailReactIcon from "@/app/component/products/DetailReactIcon";
 import QiitaIcon from "@/public/qiita-icon.png";
+import { ProductsHeader } from "@/app/component/products/ProductsHeader";
 
 export default function Products() {
     return (
         <>
-        <div className="mt-52"></div>
+        <ProductsHeader />
 
-        <div className="mx-auto max-w-3xl">            
-            <ProductsHeader />
+        <div className="mx-auto max-w-3xl mt-10">            
+            <ProductsHeaderStr />
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
 
                 <ProductCard 
