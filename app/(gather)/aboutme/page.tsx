@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { SiJavascript, SiTypescript, SiNextdotjs } from "react-icons/si";
@@ -11,13 +12,15 @@ import { ExpressIcon } from "@/app/component/aboutme/ExpressIcon";
 import QiitaIcon from "@/public/qiita-icon.png"
 import { SectionHeader } from "@/app/component/aboutme/SectionHeader";
 import { FadeInOut } from "@/app/component/home/FadeInOut";
-import { useState } from "react";
+import { AboutMeHeader } from "@/app/component/aboutme/AboutmeHeader";
 
 export default function AboutMe() {
   const [ hoverSectionNum, setHoverSectionNum ] = useState(0);
 
   return (
-    <div className="mx-auto w-7/12 my-10">
+    <>
+      <AboutMeHeader />
+      <div className="mx-auto w-7/12 my-10">
       <h1 className="font-bold text-5xl">私について</h1>
 
       <div
@@ -89,6 +92,7 @@ export default function AboutMe() {
         <SectionHeader>連絡先{ hoverSectionNum === 6 ? <FadeInOut /> : "" }</SectionHeader>
         <p>ecccompsenyou@gmail.com</p>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
