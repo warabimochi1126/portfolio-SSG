@@ -20,7 +20,7 @@ export default function AboutMe() {
   return (
     <>
       <AboutMeHeader />
-      <div className="mx-auto w-7/12 my-10">
+      <div className="mx-auto w-5/12 my-10">
       <h1 className="font-bold text-5xl">私について</h1>
 
       <div
