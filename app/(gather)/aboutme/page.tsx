@@ -21,7 +21,7 @@ export default function AboutMe() {
     <>
       <AboutMeHeader />
       <div className="mx-auto w-5/12 my-10">
-      <h1 className="font-bold text-5xl">私について</h1>
+      <h1 className="font-bold text-4xl">私について</h1>
 
       <div
         onMouseEnter={() => setHoverSectionNum(1)}
