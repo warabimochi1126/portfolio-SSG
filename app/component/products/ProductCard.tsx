@@ -13,8 +13,6 @@ import { DetailMainTechnology } from "./DetailMainTechnology";
 import { DetailProductLink } from "./DetailProductLink";
 import { DetailImage } from "./DetailImage";
 
-Modal.setAppElement(".App");
-
 const modalStyle = {
     overlay: {
       top: 0,
