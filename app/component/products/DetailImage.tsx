@@ -15,7 +15,7 @@ export function DetailImage({ url, imageData }: DetailImageProps) {
                 <Image src={imageData} alt="詳細画像" className="absolute top-0 left-0 h-full object-contain" />
             </Link>
             :
-            <Image src={imageData} alt="詳細画像" className="absolute top-0 left-0 h-full object-contain" /> 
+            <Image src={imageData} alt="詳細画像" className="absolute top-0 left-0 h-full object-contain cursor-not-allowed" /> 
             }
         </motion.div>
     )
