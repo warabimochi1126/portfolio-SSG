@@ -12,6 +12,7 @@ import BookCommerceImage from "@/public/book_commerce.png";
 import SnsCloneImage from "@/public/sns-clone.png";
 import DisasterMessageBoardImage from "@/public/disaster_message_board.png";
 import BookShelfImage from "@/public/book_shelf.png";
+import TechEventBoard from "@/public/tech_event_board.png";
 
 export default function Products() {
     return (
@@ -70,7 +71,7 @@ export default function Products() {
                     title="災害時伝言掲示板"
                     overViewDescription="チーム開発"
                     deployUrl="https://team-development-1.onrender.com/"
-                    overViewStrArray={["フロントエンドをpugで実装し、バックエンドをExpressで実装しています。","チーム開発です。"]}
+                    overViewStrArray={["フロントエンドをテンプレートエンジンのpugで実装し、バックエンドをExpressで実装しています。", "チーム開発で、私はバックエンドを担当しました。"]}
                     mainTechStrArray={["Express", "pug", "MongoDB"]}
                     subTechStrArray={["JavaScript", "mongoose"]}
                 >
@@ -90,6 +91,17 @@ export default function Products() {
                     <DetailReactIcon url="https://www.udemy.com/course/nodejs-comp-guide/" Icon={SiUdemy} color="#A435F0" />
                 </ProductCard>
 
+                <ProductCard
+                    imageData={TechEventBoard}
+                    altStr="技術イベント等のサムネイル画像" 
+                    title="ECC Community"
+                    overViewDescription="チーム開発"
+                    overViewStrArray={["フロントエンドをテンプレートエンジンのbladeで実装し、バックエンドをLaravelで実装しています。", "チーム開発で、私はバックエンドを担当しました。"]}
+                    mainTechStrArray={["Laravel"]}
+                    subTechStrArray={["php", "blade"]}
+                >
+                    <DetailReactIcon url="https://github.com/my-teamE/team_development" Icon={FaGithubSquare} />
+                </ProductCard>
 
             </div>
         </div>
