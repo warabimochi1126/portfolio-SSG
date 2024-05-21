@@ -109,7 +109,7 @@ export default function Products() {
                     altStr="E++のサムネイル画像" 
                     title="E++"
                     overViewDescription="チーム開発"
-                    overViewStrArray={["フロンドエンドをNext.jsで実装し、バックエンドをEXpressで実装しています。", "チーム開発で、私はバックエンドとフロントエンドの接続を担当しました。"]}
+                    overViewStrArray={["フロンドエンドをNext.jsで実装し、バックエンドをEXpressで実装しています。", "チーム開発で、私はバックエンドのCRUD用API開発とバックエンドのフロントエンドの接続を担当しました。"]}
                     mainTechStrArray={["Next.js(App Router)", "Express", "Prisma"]}
                     subTechStrArray={["TypeScript", "express-validator", "jsonwebtoken", "nodemailer", "papaparse", "ts-node-dev", ","]}
                 >
