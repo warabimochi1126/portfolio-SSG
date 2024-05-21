@@ -12,7 +12,8 @@ import BookCommerceImage from "@/public/book_commerce.png";
 import SnsCloneImage from "@/public/sns-clone.png";
 import DisasterMessageBoardImage from "@/public/disaster_message_board.png";
 import BookShelfImage from "@/public/book_shelf.png";
-import TechEventBoard from "@/public/tech_event_board.png";
+import TechEventBoardImage from "@/public/tech_event_board.png";
+import EPlusPlusImage from "@/public/e-plus-plus.png";
 
 export default function Products() {
     return (
@@ -92,7 +93,7 @@ export default function Products() {
                 </ProductCard>
 
                 <ProductCard
-                    imageData={TechEventBoard}
+                    imageData={TechEventBoardImage}
                     altStr="技術イベント等のサムネイル画像" 
                     title="ECC Community"
                     overViewDescription="チーム開発"
@@ -101,6 +102,18 @@ export default function Products() {
                     subTechStrArray={["php", "blade"]}
                 >
                     <DetailReactIcon url="https://github.com/my-teamE/team_development" Icon={FaGithubSquare} />
+                </ProductCard>
+
+                <ProductCard
+                    imageData={EPlusPlusImage}
+                    altStr="E++のサムネイル画像" 
+                    title="E++"
+                    overViewDescription="チーム開発"
+                    overViewStrArray={["フロンドエンドをNext.jsで実装し、バックエンドをEXpressで実装しています。", "チーム開発で、私はバックエンドとフロントエンドの接続を担当しました。"]}
+                    mainTechStrArray={["Next.js(App Router)", "Express", "Prisma"]}
+                    subTechStrArray={["TypeScript", "express-validator", "jsonwebtoken", "nodemailer", "papaparse", "ts-node-dev", "mui"]}
+                >
+                    <DetailReactIcon url="https://github.com/Fuuma0000/e-ten" Icon={FaGithubSquare} />
                 </ProductCard>
 
             </div>
