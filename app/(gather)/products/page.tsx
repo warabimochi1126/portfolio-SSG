@@ -20,7 +20,7 @@ export default function Products() {
         <>
         <ProductsHeader />
 
-        <div className="mx-auto max-w-3xl mt-10">            
+        <div className="mx-auto max-w-3xl mt-10 mb-20">            
             <ProductsHeaderStr />
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
 
@@ -111,10 +111,11 @@ export default function Products() {
                     overViewDescription="チーム開発"
                     overViewStrArray={["フロンドエンドをNext.jsで実装し、バックエンドをEXpressで実装しています。", "チーム開発で、私はバックエンドとフロントエンドの接続を担当しました。"]}
                     mainTechStrArray={["Next.js(App Router)", "Express", "Prisma"]}
-                    subTechStrArray={["TypeScript", "express-validator", "jsonwebtoken", "nodemailer", "papaparse", "ts-node-dev", "mui"]}
+                    subTechStrArray={["TypeScript", "express-validator", "jsonwebtoken", "nodemailer", "papaparse", "ts-node-dev", ","]}
                 >
-                    <DetailReactIcon url="https://github.com/Fuuma0000/e-ten" Icon={FaGithubSquare} />
+                    <DetailReactIcon url="https://github.com/my-teamE/team_development" Icon={FaGithubSquare} />
                 </ProductCard>
+
 
             </div>
         </div>
