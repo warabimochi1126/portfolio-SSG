@@ -38,7 +38,7 @@ interface ProductCardProps {
     deployUrl?: string;
     overViewStrArray: string[];
     mainTechStrArray: string[];
-    subTechStrArray: string[];
+    subTechStrArray?: string[];
     children: React.ReactNode;
 }  
 

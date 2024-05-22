@@ -1,6 +1,6 @@
 interface DetailMainTechnologyProps {
     mainTechStrArray: string[];
-    subTechStrArray: string[];
+    subTechStrArray?: string[];
 }
 
 export function DetailMainTechnology({ mainTechStrArray, subTechStrArray }: DetailMainTechnologyProps) {
@@ -13,14 +13,15 @@ export function DetailMainTechnology({ mainTechStrArray, subTechStrArray }: Deta
                     <span key={index} className="font-bold">
                         { mainTechStr }
                     </span>
-                    <span> / </span>
+                    {( index < mainTechStrArray.length - 1 || subTechStrArray ) ? " / " : "" }
                 </>
                 )}
-                { subTechStrArray.map((subTechStr, index) =>
+                { subTechStrArray?.map((subTechStr, index) =>
                 <>
                     <span key={index}>
                         { subTechStr }
-                    </span>{index < subTechStrArray.length - 1 ? " / " : ""}
+                    </span>
+                    { index < subTechStrArray.length - 1 ? " / " : "" }
                 </>
                 )}
             </p>
