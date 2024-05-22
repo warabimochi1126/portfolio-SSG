@@ -14,6 +14,8 @@ import DisasterMessageBoardImage from "@/public/disaster_message_board.png";
 import BookShelfImage from "@/public/book_shelf.png";
 import TechEventBoardImage from "@/public/tech_event_board.png";
 import EPlusPlusImage from "@/public/e-plus-plus.png";
+import ECardImage from "@/public/ecard.jpg";
+import NoImage from "@/public/noimage.jpg";
 
 export default function Products() {
     return (
@@ -115,6 +117,40 @@ export default function Products() {
                 >
                     <DetailReactIcon url="https://github.com/my-teamE/team_development" Icon={FaGithubSquare} />
                 </ProductCard>
+
+                <ProductCard
+                    imageData={ECardImage}
+                    altStr="ECardのサムネイル画像" 
+                    title="ECard"
+                    overViewDescription="個人開発"
+                    overViewStrArray={["1年生のAndroid開発の授業の最終課題であるアウトプット作品です。"]}
+                    mainTechStrArray={["Java"]}
+                >
+                    <DetailReactIcon url="https://github.com/warabimochi1126/ECard" Icon={FaGithubSquare} />
+                </ProductCard>
+
+                <ProductCard
+                    imageData={NoImage}
+                    altStr="kotlin-todoのサムネイル画像" 
+                    title="kotlin-todo"
+                    overViewDescription="niconico"
+                    overViewStrArray={["kotlinで作成したtodoアプリです。", "N予備校のハンズオンです。"]}
+                    mainTechStrArray={["kotlin", "Jetpack Compose"]}
+                >
+                    <DetailReactIcon url="https://github.com/warabimochi1126/kotlin-todo" Icon={FaGithubSquare} />
+                </ProductCard>
+
+                <ProductCard
+                    imageData={NoImage}
+                    altStr="simple-image-downloaderのサムネイル画像" 
+                    title="画像ダウンロードアプリ"
+                    overViewDescription="Udemy"
+                    overViewStrArray={["Electronで作成したURLを指定するだけで画像を描画・保存出来るデスクトップアプリケーションです。", "Udemy講座のハンズオンです。"]}
+                    mainTechStrArray={["Electron", "playwright", "image-downloader"]}
+                >
+                    <DetailReactIcon url="https://github.com/warabimochi1126/simple-image-downloader" Icon={FaGithubSquare} />
+                </ProductCard>
+
 
             </div>
         </div>
