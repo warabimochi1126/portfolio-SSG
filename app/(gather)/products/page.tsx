@@ -115,7 +115,7 @@ export default function Products() {
                     mainTechStrArray={["Next.js(App Router)", "Express", "Prisma"]}
                     subTechStrArray={["TypeScript", "express-validator", "jsonwebtoken", "nodemailer", "papaparse", "ts-node-dev"]}
                 >
-                    <DetailReactIcon url="https://github.com/my-teamE/team_development" Icon={FaGithubSquare} />
+                    <DetailReactIcon url="https://github.com/Fuuma0000/e-ten" Icon={FaGithubSquare} />
                 </ProductCard>
 
                 <ProductCard
