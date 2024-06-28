@@ -65,6 +65,7 @@ export default function AboutMe() {
         <SectionHeader>取得した資格{ hoverSectionNum === 4 ? <FadeInOut /> : "" }</SectionHeader>
         <p>応用情報技術者 (2023/6)</p>
         <p>情報処理安全確保支援士 (2023/12)</p>
+        <p>Oracle Certified Java Programmer, Bronze SE (2023/5)</p>
       </div>
 
       <div
