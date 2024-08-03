@@ -31,7 +31,7 @@ const modalStyle = {
 };
 
 interface ProductCardProps {
-    imageData: StaticImageData;
+    imageData: StaticImageData | string;
     altStr: string;
     title: string;
     overViewDescription: string;
@@ -39,7 +39,7 @@ interface ProductCardProps {
     overViewStrArray: string[];
     mainTechStrArray: string[];
     subTechStrArray?: string[];
-    children: React.ReactNode;
+    children?: React.ReactNode;
 }  
 
 export function ProductCard({ imageData, altStr, title, overViewDescription, deployUrl, overViewStrArray, mainTechStrArray, subTechStrArray, children }: ProductCardProps) {
