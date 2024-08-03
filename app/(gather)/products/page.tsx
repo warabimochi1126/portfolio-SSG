@@ -17,7 +17,21 @@ import EPlusPlusImage from "@/public/e-plus-plus.png";
 import ECardImage from "@/public/ecard.jpg";
 import NoImage from "@/public/noimage.jpg";
 
-export default function Products() {
+interface Product {
+    id: number;
+    imageSrcPath: string;
+    deployUrl: string;
+    productName: string;
+    overview: string[];
+    mainTechnology: string[];
+    subTechnology: string[];
+    productLinks: string[];
+}
+  
+export default async function Products() {
+    const response = await fetch(`${process.env.API_URL}/products`);
+    const productsData: Product[] = await response.json();
+
     return (
         <>
         <ProductsHeader />
@@ -26,7 +40,7 @@ export default function Products() {
             <ProductsHeaderStr />
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
 
-                <ProductCard 
+            {/* <ProductCard 
                     imageData={EnvHubImage} 
                     altStr="EnvHubのサムネイル画像" 
                     title="EnvHub" 
@@ -149,9 +163,32 @@ export default function Products() {
                     mainTechStrArray={["Electron", "playwright", "image-downloader"]}
                 >
                     <DetailReactIcon url="https://github.com/warabimochi1126/simple-image-downloader" Icon={FaGithubSquare} />
-                </ProductCard>
+                </ProductCard> */}
 
-
+                {productsData.map((productData, index) => (
+                    <ProductCard
+                        key={index}
+                        imageData={productData.imageSrcPath ? productData.imageSrcPath : "/noimage.jpg"}
+                        altStr="サムネイル画像"
+                        title={productData.productName}
+                        overViewDescription={productData.overview[0]}
+                        deployUrl={productData.deployUrl}
+                        overViewStrArray={productData.overview.slice(1)}
+                        mainTechStrArray={productData.mainTechnology}
+                        subTechStrArray={productData.subTechnology ? productData.subTechnology : undefined}
+                    >
+                        { productData.productLinks.map((productLink, index) => {
+                            const productHost = new URL(productLink).host;
+                            return productHost === "qiita.com" ? (
+                                <DetailImageIcon key={index} url={productLink} icon={QiitaIcon} />
+                            ) : productHost === "github.com" ? (
+                                <DetailReactIcon key={index} url={productLink} Icon={FaGithubSquare} />
+                            ) : productHost === "www.udemy.com" ? (
+                                <DetailReactIcon key={index} url={productLink} Icon={SiUdemy} color="#A435F0" />
+                            ) : null;
+                        })}
+                    </ProductCard>
+                ))}
             </div>
         </div>
         </>
