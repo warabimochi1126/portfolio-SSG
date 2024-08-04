@@ -175,7 +175,7 @@ export default async function Products() {
                         deployUrl={productData.deployUrl}
                         overViewStrArray={productData.overview.slice(1)}
                         mainTechStrArray={productData.mainTechnology}
-                        subTechStrArray={productData.subTechnology ? productData.subTechnology : undefined}
+                        subTechStrArray={!productData.subTechnology[0] && productData.subTechnology.length === 1 ? undefined : productData.subTechnology }
                     >
                         { productData.productLinks.map((productLink, index) => {
                             const productHost = new URL(productLink).host;
