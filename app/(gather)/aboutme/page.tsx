@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -103,25 +104,32 @@ export default function AboutMe() {
           <p>Oracle Certified Java Programmer, Bronze SE (2023/5)</p>
         </div>
 
-        <div>
-          <SectionHeader>インターンシップ</SectionHeader>
-          <p className="mb-2">
-            株式会社ドワンゴ 教材基盤開発セクション (2024/8~2024/10)
-          </p>
-          <Link href="https://blog.nnn.dev/entry/2024/10/29/110000">
-            <Image
-              src={InternShipOGP}
-              alt="株式会社ドワンゴインターンシップOGP画像"
-            />
-          </Link>
-        </div>
-
         <div
           onMouseEnter={() => setHoverSectionNum(5)}
           onMouseLeave={() => setHoverSectionNum(0)}
         >
           <SectionHeader>
-            各種リンク{hoverSectionNum === 5 ? <FadeInOut /> : ""}
+            インターンシップ {hoverSectionNum === 5 ? <FadeInOut /> : ""}
+          </SectionHeader>
+          <p className="mb-2">
+            株式会社ドワンゴ 教材基盤開発セクション (2024/8~2024/10)
+          </p>
+          <motion.div whileHover={{ scale: 0.9 }}>
+            <Link href="https://blog.nnn.dev/entry/2024/10/29/110000">
+              <Image
+                src={InternShipOGP}
+                alt="株式会社ドワンゴインターンシップOGP画像"
+              />
+            </Link>
+          </motion.div>
+        </div>
+
+        <div
+          onMouseEnter={() => setHoverSectionNum(6)}
+          onMouseLeave={() => setHoverSectionNum(0)}
+        >
+          <SectionHeader>
+            各種リンク{hoverSectionNum === 6 ? <FadeInOut /> : ""}
           </SectionHeader>
           <div className="flex space-x-2">
             <Link href="https://github.com/warabimochi1126">
@@ -137,11 +145,11 @@ export default function AboutMe() {
         </div>
 
         <div
-          onMouseEnter={() => setHoverSectionNum(6)}
+          onMouseEnter={() => setHoverSectionNum(7)}
           onMouseLeave={() => setHoverSectionNum(0)}
         >
           <SectionHeader>
-            連絡先{hoverSectionNum === 6 ? <FadeInOut /> : ""}
+            連絡先{hoverSectionNum === 7 ? <FadeInOut /> : ""}
           </SectionHeader>
           <p>ecccompsenyou@gmail.com</p>
         </div>
