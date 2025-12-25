@@ -45,7 +45,7 @@ export default function AboutMe() {
           <SectionHeader>
             希望職種{hoverSectionNum === 1 ? <FadeInOut /> : ""}
           </SectionHeader>
-          <p>バックエンドエンジニア・セキュリティエンジニア</p>
+          <p>フロントエンドエンジニア・バックエンドエンジニア</p>
         </div>
 
         <div
@@ -53,9 +53,9 @@ export default function AboutMe() {
           onMouseLeave={() => setHoverSectionNum(0)}
         >
           <SectionHeader>
-            年齢{hoverSectionNum === 2 ? <FadeInOut /> : ""}
+            卒業年度{hoverSectionNum === 2 ? <FadeInOut /> : ""}
           </SectionHeader>
-          <p>20歳 (26卒)</p>
+          <p>26卒</p>
         </div>
 
         <div
